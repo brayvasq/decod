@@ -9,7 +9,6 @@ module Decod::Binary
   #     - NOTE: We put the values at the beginning of the string.
   #
   #     | value | divider      | module  | reminder | string    |
-  #     | ----- | ------------ | ------- | -------- | --------- |
   #     | 104   | 104 / 2 = 56 | 104 % 2 | 0        | "0"       |
   #     | 52    | 52 / 2 = 28  | 52 % 2  | 0        | "00"      |
   #     | 26    | 26 / 2 = 13  | 26 % 2  | 0        | "000"     |
@@ -59,7 +58,6 @@ module Decod::Binary
   #   - Multiply each value by (2 pow counter)
   #   
   #      | string       | char = string[n] | pow = 2^n | value += pow * char |
-  #      | ------------ | ---------------- | --------- | ------------------- |
   #      |  "01101000"  | 0                | 2^0 = 1   | 0                   |
   #      |  "01101000"  | 0                | 2^1 = 2   | 0                   |
   #      |  "01101000"  | 0                | 2^2 = 4   | 0                   |
